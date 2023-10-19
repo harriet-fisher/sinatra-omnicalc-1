@@ -1,0 +1,16 @@
+<% params %>
+<h1><%= request.path_info == "/square" ? "Square Results" : "Square Root Results" %></h1>
+
+<body>
+    <p>Number</p>
+    <blockquote><%= @number %></blockquote>
+    <% if @square %>
+        <p>Square</p>
+        <blockquote><%=@square%></blockquote>
+        <a href="/square/new">Calculate another square</a>
+    <% elsif @square_root %>
+        <p>Square Root</p>
+        <blockquote><%=@square_root%></blockquote>
+        <a href="/square_root/new">Calculate another square root</a>
+    <% end %>
+</body>
