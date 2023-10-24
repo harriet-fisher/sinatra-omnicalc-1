@@ -1,0 +1,20 @@
+<% params %>
+<html>
+  <head>
+    <title>Payment Results</title>
+  </head>
+
+<h1>Payment Results</h1>
+<body>
+  <dl>
+    <dt>APR</dt>
+    <dd><%= sprintf('%.4f', params.fetch("user_apr").to_f) %>%</dd>
+    <dt>Number of years</dt>
+    <dd><%=@years%></dd>
+    <dt>Principal</dt>
+    <dd>$<%= sprintf('%.2f', @pv)%></dd>
+    <dt>Payment</dt>
+    <dd>$<%=@user_payment%></dd>
+  </dl>
+  <a href="/payment/new">Calculate another payment</a>
+</body>

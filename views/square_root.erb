@@ -1,19 +1,18 @@
 <!DOCTYPE html>
   <head>
-    <title>Square Root Form</title>
+    <title>Omnicalc Square Root</title>
   </head>
+  <style>
+      form input[type="submit"] {
+        display: block;
+      }
+  </style>
 
   <body>
-    <form action="/square_root/results">
-    <div>
-      <label for="number_id">Enter a number</label>
-    </div>
-    <div>
-      <input id="number_id" name="number" type="text" placeholder="What number do you want">
-    </div>
-    <div>
-      <button type="submit">Calculate square root</button>
-    </div>
-    </form>
-  </body>
-  </html>
+      <form action="/square_root/results" method="post">
+        <label for="number">Enter a number</label>
+        <input type="text" id="number" name="number" placeholder="What number do you want">
+        <input type="submit" value="Calculate square root">
+      </form>
+</body>
+</html>

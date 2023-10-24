@@ -1,16 +1,30 @@
 <% params %>
-<h1><%= request.path_info == "/square" ? "Square Results" : "Square Root Results" %></h1>
+<style>
+    .indented {
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
+    p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    h {
+        margin-bottom: 15px;
+    }
+</style>
 
+<h1><%= request.path_info == "/square" ? "Square Results" : "Square Root Results" %></h1>
 <body>
     <p>Number</p>
-    <blockquote><%= @number %></blockquote>
+    <p class="indented"><%= @number %></p>
+
     <% if @square %>
         <p>Square</p>
-        <blockquote><%=@square%></blockquote>
+        <p class="indented"><%=@square%></p>
         <a href="/square/new">Calculate another square</a>
     <% elsif @square_root %>
         <p>Square Root</p>
-        <blockquote><%=@square_root%></blockquote>
+        <p class="indented"><%=@square_root%></p>
         <a href="/square_root/new">Calculate another square root</a>
     <% end %>
 </body>

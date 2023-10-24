@@ -2,13 +2,20 @@
   <head>
     <title>Omnicalc Home</title>
   </head>
-
+  <style>
+      form label, 
+      form input {
+        display: block;
+      }
+  </style>
 
   <body>
-    <form action="<%= request.path_info == "/square" ? "/square/results" : "/square_root/results" %>" method="post">
-      <label for="number">Number:</label>
-      <input type="text" id="number" name="number">
-      <input type="submit" value="<%= request.path_info == "/square" ? "Calculate Square" : "Calculate Square Root" %>">
-    </form>
+    <div>
+      <form action="<%= request.path_info == "/square" ? "/square/results" : "/square_root/results" %>" method="post">
+        <label for="number">Enter a number</label>
+        <input type="text" id="number" name="number" placeholder="What number do you want">
+        <input type="submit" value="<%= request.path_info == "/square_root/new" ? "Calculate Square Root" : "Calculate square"%>">
+      </form>
+    </div>
 </body>
 </html>
