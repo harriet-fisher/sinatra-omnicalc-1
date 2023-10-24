@@ -31,7 +31,7 @@ end
 
 post("/payment/results") do
   @apr = (params.fetch("user_apr").to_f)/100
-  @years = params.fetch("user_years").to_f
+  @years = params.fetch("user_years").to_i
   @pv = params.fetch("user_pv").to_f
   payment_numerator = (@apr/12)*@pv
   payment_denominator = 1 - (1 + (@apr/12))**(-(@years*12))
