@@ -14,7 +14,7 @@ get("/square_root/new") do
 end
 
 post("/square_root/results") do
-  @number = params.fetch("number").to_i
+  @number = params.fetch("number").to_f
   @square_root = @number**0.5
   erb(:flexible)
 end
@@ -22,7 +22,7 @@ end
 post("/square/results") do
   @number = params.fetch("number").to_i
   @square = @number**2
-  erb(:flexible)
+  erb(:square_results)
 end
 
 get("/payment/new") do
