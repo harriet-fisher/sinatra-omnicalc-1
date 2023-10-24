@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+  <head>
+    <title>Omnicalc Square</title>
+  </head>
+  <style>
+      form label, 
+      form input {
+        display: block;
+      }
+  </style>
+
+  <body>
+    <div>
+      <form action="/square/results" method="post">
+        <label for="number">Enter a number</label>
+        <input type="text" id="number" name="number" placeholder="What number do you want">
+        <input type="submit" value="Calculate square">
+      </form>
+    </div>
+</body>
+</html>
