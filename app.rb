@@ -15,8 +15,8 @@ end
 
 post("/square_root/results") do
   @number = params.fetch("number").to_f
-  @square_root = @number**0.5
-  erb(:flexible)
+  @square_root = (@number)**0.5
+  erb(:square_root_results)
 end
 
 post("/square/results") do
