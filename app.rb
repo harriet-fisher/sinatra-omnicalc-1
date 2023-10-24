@@ -20,7 +20,7 @@ post("/square_root/results") do
 end
 
 post("/square/results") do
-  @number = params.fetch("number").to_i
+  @number = params.fetch("number").to_f
   @square = @number**2
   erb(:square_results)
 end
